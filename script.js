@@ -53,7 +53,17 @@ newGame.addEventListener('click', restart);
 //     };
 // })
 
-// --- Need to get the cards to overlap on top of each other upon clicking a new one -- //
+// // ---- SELECTING ANSWERS ---- //
+// // Coding below is absolutely wrong, just trying to get general point across
+// function chooseAnswer (correct, incorrect) {
+// 	if (event.target == answerA || answerF || answerH) {
+// 		yay you did it!
+// 	} else if (event.target != answerA || answerF || answerH) {
+// 		oops!!
+// 	}
+// }
+
+// --- Need to get the cards to overlap on top of each other upon clicking a new one -- DONE -- //
 
 // --- use innHTML to clear out info in the current overlayed card and display if the player got the correct answer.
 // --- if answerPicked === answerA (congrats you did it!)
