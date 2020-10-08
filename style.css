@@ -6,12 +6,14 @@ body {
 	width: 50vh
 }
 
-#instructions {
+#intro {
 	text-align: center;
 	line-height: 25px;
 	background-color: #e84678;
 	border-radius: 20px;
-	display: none;
+	width: 100%;
+	top: 10vh;
+	display: inline-block;
 }
 
 .card {
@@ -21,7 +23,7 @@ body {
 	border-radius: 20px;
 	width: 100%;
 	top: 10vh; 
-	display: inline-block;
+	display: none;
 }
 
 .modal {
@@ -34,18 +36,6 @@ body {
 	z-index: 1;
 	display: none;
 }
-
-/* #instructions {
-	background-color: white;
-	height: 350px;
-	width: 550px;
-	border-radius: 2px;
-	margin: 150px auto;
-	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-	padding: 2%;
-	line-height: 120%;
-	font-family: arial; */
-/* } */
 
 .pretty-button {
 	padding: 8px 18px;
