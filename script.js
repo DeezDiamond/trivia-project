@@ -1,6 +1,6 @@
-const instructions document.querySelector
+const instructions = document.querySelector(".instructions")
 
-const questOne
+const questOne 
 
 const questTwo
 
