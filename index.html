@@ -27,13 +27,18 @@
 		<div id="container">
 			The game will go here.
 
+			<button id="begin" class="pretty-button" href="#questionOne">
+				Begin Game
+			</button>
+
 			<div id="instructions">
+				<h3>How To Play</h3>
 				<ul>
-					<li>Step one</li>
-					<li>Step Two</li>
-					<li>Step Three?</li>
+					<li>Read the question</li>
+					<li>Select your answer</li>
+					<li>Click Next to continue</li>
 				</ul>
-				<button id="begin" class="pretty-button" href="#questionOne">
+				<button id="goToOne" class="pretty-button" href="#questionOne">
 					Begin Game
 				</button>
 			</div>
@@ -45,6 +50,7 @@
 					<li id="answerB">B: Victoria Crowned Pigeon</li>
 					<li id="answerC">C: California Quail</li>
 				</ul>
+				<div id="questionOneAnswer"></div>
 				<button id="goToTwo" class="pretty-button" href="#questionTwo">
 					Next Question
 				</button>
@@ -57,6 +63,7 @@
 					<li id="answerE">E: Orange, Green, and Purple</li>
 					<li id="answerF">F: Red, Yellow, and Blue</li>
 				</ul>
+				<div id="questionTwoAnswer"></div>
 				<button id="goToThree" class="pretty-button" href="#question3">
 					Next Question
 				</button>
@@ -69,6 +76,7 @@
 					<li id="answerH">H: Argentina</li>
 					<li id="answerI">I: Africa</li>
 				</ul>
+				<div id="questionThreeAnswer"></div>
 				<button id="restart" class="pretty-button" href="#">Start Over</button>
 			</div>
 		</div>

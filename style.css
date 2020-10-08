@@ -2,11 +2,26 @@ body {
 	background-color: antiquewhite;
 }
 
+#container {
+	width: 50vh
+}
+
+#instructions {
+	text-align: center;
+	line-height: 25px;
+	background-color: #e84678;
+	border-radius: 20px;
+	display: none;
+}
+
 .card {
 	text-align: center;
 	line-height: 25px;
 	background-color: #e84678;
 	border-radius: 20px;
+	width: 100%;
+	top: 10vh; 
+	display: inline-block;
 }
 
 .modal {
@@ -42,3 +57,5 @@ body {
 	font-family: 'Arial';
 	margin: 0 auto;
 }
+
+#
