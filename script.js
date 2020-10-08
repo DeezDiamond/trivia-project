@@ -39,6 +39,19 @@ const restart = () => {
 newGame.addEventListener('click', restart);
 
 
+// ---- SCORE CARD ---- //
+// let addPoints = 0
+// const answers = document.querySelector("li")
+
+// answers.addEventListener("click", (event) => {
+//     if (event.target.dataset.increment == 10) {
+//         addPoints +=10
+//         addPointsScore.innerText = addPoints
+//     } else if (event.target.dataset.increment == 0) {
+//         addPoints += 0
+//     };
+// })
+// console.log(addPoints);
 
 
 // --- Need to get the cards to overlap on top of each other upon clicking a new one -- //

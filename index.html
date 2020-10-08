@@ -15,6 +15,8 @@
 				<p>There is a series of three questions in this trivia game. Can you answer them all? Click the button below to review the instructions, then have fun!</p>
 			
 				<p>I don't like how the button hops around. Fix it via putting it into a footer.</p>
+
+				<p>Need to go back and add point parameters to each question</p>
 				<button id="begin" class="pretty-button">
 					How To Play
 				</button>
@@ -36,9 +38,9 @@
 			<div class="card" id="questionOne">
 				<h3>1. Which of the following is a bird of prey?</h3>
 				<ul id="questionOneChoices">
-					<li id="answerA">A: Red-Tailed Hawk</li>
-					<li id="answerB">B: Victoria Crowned Pigeon</li>
-					<li id="answerC">C: California Quail</li>
+					<li id="answerA" data-increment="10">A: Red-Tailed Hawk</li>
+					<li id="answerB" data-increment="0">B: Victoria Crowned Pigeon</li>
+					<li id="answerC" data-increment="0">C: California Quail</li>
 				</ul>
 				<div id="questionOneAnswer"></div>
 				<button id="goToTwo" class="pretty-button">
@@ -49,9 +51,9 @@
 			<div class="card" id="questionTwo">
 				<h3>2. Which sets of colors are primary colors?</h3>
 				<ul id="questionTwoChoices">
-					<li id="answerD">D: Pink, Purple, and Brown</li>
-					<li id="answerE">E: Orange, Green, and Purple</li>
-					<li id="answerF">F: Red, Yellow, and Blue</li>
+					<li id="answerD" data-increment="0">D: Pink, Purple, and Brown</li>
+					<li id="answerE" data-increment="0">E: Orange, Green, and Purple</li>
+					<li id="answerF" data-increment="10">F: Red, Yellow, and Blue</li>
 				</ul>
 				<div id="questionTwoAnswer"></div>
 				<button id="goToThree" class="pretty-button">
@@ -62,9 +64,9 @@
 			<div class="card" id="questionThree">
 				<h3>3. Which of the following is a country?</h3>
 				<ul id="questionThreeChoices">
-					<li id="answerG">G: Asia</li>
-					<li id="answerH">H: Argentina</li>
-					<li id="answerI">I: Africa</li>
+					<li id="answerG" data-increment="0">G: Asia</li>
+					<li id="answerH" data-increment="10">H: Argentina</li>
+					<li id="answerI" data-increment="0">I: Africa</li>
 				</ul>
 				<div id="questionThreeAnswer"></div>
 				<button id="restart" class="pretty-button">Start Over</button>
