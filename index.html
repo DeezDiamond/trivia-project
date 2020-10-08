@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Project 1: Trivia</title>
+	</head>
+	<body>
+		<h1>Welcome to Trivia</h1>
+		<!-- <center>
+			<button id="open" class="pretty-button">How to Play</button>
+		</center>
+		<div id="modal">
+			<div id="instructions">
+				<ul>
+					<li>Step one</li>
+					<li>Step Two</li>
+					<li>Step Three?</li>
+				</ul>
+			</div>
+			<button id="close" class="pretty-button" href="#">
+				Close Instructions
+			</button>
+		</div> -->
+
+		<div id="container">
+			The game will go here.
+
+			<div id="instructions">
+				<ul>
+					<li>Step one</li>
+					<li>Step Two</li>
+					<li>Step Three?</li>
+				</ul>
+				<button id="begin" class="pretty-button" href="#questionOne">
+					Begin Game
+				</button>
+			</div>
+
+			<div class="card" id="questionOne">
+				<h3>Which of the following is a bird of prey?</h3>
+				<ul id="questionOneChoices">
+					<li id="answerA">A: Red-Tailed Hawk</li>
+					<li id="answerB">B: Victoria Crowned Pigeon</li>
+					<li id="answerC">C: California Quail</li>
+				</ul>
+				<button id="goToTwo" class="pretty-button" href="#questionTwo">
+					Next Question
+				</button>
+			</div>
+
+			<div class="card" id="questionTwo">
+				<h3>Which sets of colors are primary colors?</h3>
+				<ul id="questionTwoChoices">
+					<li id="answerD">D: Pink, Purple, and Brown</li>
+					<li id="answerE">E: Orange, Green, and Purple</li>
+					<li id="answerF">F: Red, Yellow, and Blue</li>
+				</ul>
+				<button id="goToThree" class="pretty-button" href="#question3">
+					Next Question
+				</button>
+			</div>
+
+			<div class="card" id="questionThree">
+				<h3>Which of the following is a country?</h3>
+				<ul id="questionThreeChoices">
+					<li id="answerG">G: Asia</li>
+					<li id="answerH">H: Argentina</li>
+					<li id="answerI">I: Africa</li>
+				</ul>
+				<button id="restart" class="pretty-button" href="#">Start Over</button>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

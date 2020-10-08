@@ -1,0 +1,43 @@
+body {
+	background-color: antiquewhite;
+}
+
+.card {
+	text-align: center;
+	line-height: 25px;
+	imag;
+}
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	display: none;
+}
+
+/* #instructions {
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+	margin: 150px auto;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+	padding: 2%;
+	line-height: 120%;
+	font-family: arial; */
+/* } */
+
+.pretty-button {
+	padding: 8px 18px;
+	background-color: #9696d6;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	margin: 0 auto;
+}
