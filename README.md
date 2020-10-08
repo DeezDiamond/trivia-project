@@ -1,5 +1,9 @@
 # Trivia
 
+- This page is a simple trivia game that asks the user a series of questions. 
+
+- The code has been pushed through [HTML](https://html5.validator.nu/) and [CSS](https://jigsaw.w3.org/css-validator/) validators.
+
 ## User Stories 
 
 - As a player, I want information on why a selected answer is wrong, so that I earn educational benefit from this game.
