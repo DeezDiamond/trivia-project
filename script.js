@@ -109,6 +109,15 @@ pointsEarned.style.textAlign = "center"
 // 	}
 // }
 
+// // -------- OTHER PSUEDO CODE  ------ // 
+// function chooseAnswer() {
+//     if (answer == 10) {
+// 		innerText = "congrats!"
+//     } else if (answer != 10) {
+//      innerText = "Oops, that's not the right answer! The correct answer is a!" 
+//     }
+// }
+
 // // ---- ATTEMPTING TO CODE ---- // 
 // questionOneChoices.addEventListener("click", answer)
 // let questionOneChoices = answerA
