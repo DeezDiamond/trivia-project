@@ -44,22 +44,23 @@ newGame.addEventListener('click', restart);
 
 let addPoints = 0;
 
-// // // Why isn't this an event listener? The moment I put ()'s the event listener text changes to yellow and won't work.
-// answers.addEventListener("click", (event) => {
-//     console.log(event.target.dataset.increment);
-//     if (event.target.dataset.increment == 10) {
-//         addPoints +=10
-//         addPointsScore.innerText = addPoints
-//     } else if (event.target.dataset.increment == 0) {
-//         addPoints += 0
-//     };
-// })
+// // Why isn't this an event listener? The moment I put ()'s the event listener text changes to yellow and won't work.
 
-// const answers = document.querySelectorAll("#card");
+const answers = document.querySelectorAll('.questioncard');
+
+answers[0].addEventListener("click", (event) => {
+    console.log(event.target.dataset.increment);
+    if (event.target.dataset.increment == 10) {
+        addPoints +=10
+		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+    } else if (event.target.dataset.increment == 0) {
+        addPoints += 0
+    };
+})
+
 
 // // --------- Tally ---------- // 
-const pointsEarned = document.createElement("h3")
-pointsEarned.innerText = `Points Earned: ${addPoints}`
+const pointsEarned = document.querySelector("h3")
 const score = document.querySelector('#score');
 score.appendChild(pointsEarned)
 pointsEarned.style.textAlign = "center"

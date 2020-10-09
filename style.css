@@ -17,7 +17,7 @@ body {
 	display: inline-block;
 } */
 
-.card, #intro {
+.card, .questioncard, #intro {
 	text-align: center;
 	line-height: 25px;
 	background-color: #e84678;
