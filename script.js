@@ -32,17 +32,21 @@ const goToThree = () => {
 };
 questThree.addEventListener('click', goToThree);
 
+
+// // ----- RESET FIELD ----- //
+// // ----Resets point count, clears feedback, takes user back to the beginning--------- //
+
 const restart = () => {
 	intro.style.display = 'block';
 	questionThree.style.display = 'none';
 	pointsEarned.innerText = "Points Earned: 0"
 	addPoints = 0;
-	playerFeedback.innerText = ""
+	playerFeedbackOne.innerText = "";
+	playerFeedbackTwo.innerText = '';
+	playerFeedbackThree.innerText = '';
 };
 newGame.addEventListener('click', restart);
 
-
-// // ----- RESET ANSWER FIELD ----- //
 const playerFeedbackOne = document.querySelector('#questionOneAnswer');
 const playerFeedbackTwo = document.querySelector('#questionTwoAnswer');
 const playerFeedbackThree = document.querySelector('#questionThreeAnswer');
@@ -55,19 +59,16 @@ const answers = document.querySelectorAll('.questioncard');
 
 // // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards. 
 answers[0].addEventListener("click", (event) => {
-	// console.log(event.target.dataset.increment);
-	
     if (event.target.dataset.increment == 10) {
         addPoints +=10
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
 		playerFeedbackOne.innerText = "Yay, you guessed correctly! Click the next button to continue."
     } else if (event.target.dataset.increment == 0) {
-        playerFeedbackOne.innerText = "Oops! The correct answer is Red Tailed Hawk. Click the next button to continue." // // Not sure if I want an alert like this.
+        playerFeedbackOne.innerText = "Oops! Red Tailed Hawks are birds of prey because they hunt smaller animals." // // Not sure if I want an alert like this.
     };
 })
 
 answers[1].addEventListener('click', (event) => {
-	// console.log(event.target.dataset.increment);
 	if (event.target.dataset.increment == 10) {
 		addPoints += 10;
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
@@ -78,13 +79,12 @@ answers[1].addEventListener('click', (event) => {
 });
 
 answers[2].addEventListener('click', (event) => {
-	// console.log(event.target.dataset.increment);
 	if (event.target.dataset.increment == 10) {
 		addPoints += 10;
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
-		alert('Yay, you guessed correctly! Click the next button to continue.');
+		playerFeedbackThree.innerText = 'Yay, you guessed correctly! Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
-		alert('Oops! Argentina is a country within South America, while Africa and Asia are continents.'); // // Not sure if I want an alert like this.
+		playerFeedbackThree.innerText = 'Oops! Argentina is a country within South America, while Africa and Asia are continents.'; // // Not sure if I want an alert like this.
 	}
 });
 
