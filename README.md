@@ -2,7 +2,7 @@
 
 - This page is a simple trivia game that asks the user a series of questions. 
 
-- The code has been pushed through [HTML](https://html5.validator.nu/) and [CSS](https://jigsaw.w3.org/css-validator/) validators.
+- JavaScript, HTML, and CSS have been used in this page, and pushed through [HTML](https://html5.validator.nu/) and [CSS](https://jigsaw.w3.org/css-validator/) validators.
 
 ## User Stories 
 

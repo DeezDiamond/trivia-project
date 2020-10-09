@@ -28,14 +28,20 @@ body {
 	padding: 10px;
 }
 
+.questioncard li {
+	background-color: #824678;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+
 #instructions, #questionOne, #questionTwo, #questionThree {
 	display: none;
 }
 
-/* .footer {
+.buttonfooter {
 	position: absolute;
 	bottom: 0;	
-} */
+}
 
 .pretty-button {
 	padding: 8px 18px;

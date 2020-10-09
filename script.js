@@ -35,31 +35,61 @@ questThree.addEventListener('click', goToThree);
 const restart = () => {
 	intro.style.display = 'block';
 	questionThree.style.display = 'none';
+	pointsEarned.innerText = "Points Earned: 0"
+	addPoints = 0;
+	playerFeedback.innerText = ""
 };
 newGame.addEventListener('click', restart);
 
 
+// // ----- RESET ANSWER FIELD ----- //
+const playerFeedbackOne = document.querySelector('#questionOneAnswer');
+const playerFeedbackTwo = document.querySelector('#questionTwoAnswer');
+const playerFeedbackThree = document.querySelector('#questionThreeAnswer');
 
-// // // ---- SCORE CARD ---- //
+
+// // // ---- ANSWER SELECTION ---- //
 
 let addPoints = 0;
-
-// // Why isn't this an event listener? The moment I put ()'s the event listener text changes to yellow and won't work.
-
 const answers = document.querySelectorAll('.questioncard');
 
+// // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards. 
 answers[0].addEventListener("click", (event) => {
-    console.log(event.target.dataset.increment);
+	// console.log(event.target.dataset.increment);
+	
     if (event.target.dataset.increment == 10) {
         addPoints +=10
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+		playerFeedbackOne.innerText = "Yay, you guessed correctly! Click the next button to continue."
     } else if (event.target.dataset.increment == 0) {
-        addPoints += 0
+        playerFeedbackOne.innerText = "Oops! The correct answer is Red Tailed Hawk. Click the next button to continue." // // Not sure if I want an alert like this.
     };
 })
 
+answers[1].addEventListener('click', (event) => {
+	// console.log(event.target.dataset.increment);
+	if (event.target.dataset.increment == 10) {
+		addPoints += 10;
+		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+		playerFeedbackTwo.innerText = 'Yay, you guessed correctly! Click the next button to continue.';
+	} else if (event.target.dataset.increment == 0) {
+		playerFeedbackTwo.innerText = "Oops! Primary colors are Red, Yellow, and Blue because other colors can\'t be mixed to create them. Click the next button to continue"
+	}
+});
 
-// // --------- Tally ---------- // 
+answers[2].addEventListener('click', (event) => {
+	// console.log(event.target.dataset.increment);
+	if (event.target.dataset.increment == 10) {
+		addPoints += 10;
+		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+		alert('Yay, you guessed correctly! Click the next button to continue.');
+	} else if (event.target.dataset.increment == 0) {
+		alert('Oops! Argentina is a country within South America, while Africa and Asia are continents.'); // // Not sure if I want an alert like this.
+	}
+});
+
+
+// // --------- SCORE CARD ---------- // 
 const pointsEarned = document.querySelector("h3")
 const score = document.querySelector('#score');
 score.appendChild(pointsEarned)
