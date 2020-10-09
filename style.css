@@ -3,7 +3,8 @@ body {
 }
 
 #container {
-	width: 50vh
+	width: 50vh;
+	height: 50vh;
 }
 
 /* #intro {
@@ -17,14 +18,16 @@ body {
 	display: inline-block;
 } */
 
-.card, .questioncard, #intro {
+.card,
+.questioncard,
+#intro {
 	text-align: center;
 	line-height: 25px;
 	background-color: #e84678;
 	border-radius: 20px;
 	width: 100%;
 	height: 50vh;
-	top: 10vh; 
+	top: 10vh;
 	padding: 10px;
 }
 
@@ -34,13 +37,16 @@ body {
 	margin-bottom: 5px;
 }
 
-#instructions, #questionOne, #questionTwo, #questionThree {
+#instructions,
+#questionOne,
+#questionTwo,
+#questionThree {
 	display: none;
 }
 
 .buttonfooter {
-	position: absolute;
-	bottom: 0;	
+	position: relative;
+	bottom: 0;
 }
 
 .pretty-button {

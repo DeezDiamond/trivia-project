@@ -2,7 +2,14 @@
 
 - This page is a simple trivia game that asks the user a series of questions. 
 
+## Technologies Used 
+
 - JavaScript, HTML, and CSS have been used in this page, and pushed through [HTML](https://html5.validator.nu/) and [CSS](https://jigsaw.w3.org/css-validator/) validators.
+
+
+## Installation Instructions 
+
+- "For this project, clone and open the HTML file in a browser manually or on a server like LiveServer"
 
 ## User Stories 
 
@@ -10,7 +17,7 @@
 
 - As a player, I want an entire sentence to be clickable, so that I don't need to aim for a small number or radio button to choose an answer. 
 
-- As a player, I want to know my tally of correct vs incorrect answers at the end of the game. 
+- As a player, I want to know my tally of correct answers at the end of the game. 
 
 ### MVP Goals
 - Ability to choose one of three options to satisfy a question.

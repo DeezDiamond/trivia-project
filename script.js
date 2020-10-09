@@ -32,16 +32,15 @@ const goToThree = () => {
 };
 questThree.addEventListener('click', goToThree);
 
-
 // // ----- RESET FIELD ----- //
 // // ----Resets point count, clears feedback, takes user back to the beginning--------- //
 
 const restart = () => {
 	intro.style.display = 'block';
 	questionThree.style.display = 'none';
-	pointsEarned.innerText = "Points Earned: 0"
+	pointsEarned.innerText = 'Points Earned: 0';
 	addPoints = 0;
-	playerFeedbackOne.innerText = "";
+	playerFeedbackOne.innerText = '';
 	playerFeedbackTwo.innerText = '';
 	playerFeedbackThree.innerText = '';
 };
@@ -51,30 +50,33 @@ const playerFeedbackOne = document.querySelector('#questionOneAnswer');
 const playerFeedbackTwo = document.querySelector('#questionTwoAnswer');
 const playerFeedbackThree = document.querySelector('#questionThreeAnswer');
 
-
 // // // ---- ANSWER SELECTION ---- //
 
 let addPoints = 0;
 const answers = document.querySelectorAll('.questioncard');
 
-// // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards. 
-answers[0].addEventListener("click", (event) => {
-    if (event.target.dataset.increment == 10) {
-        addPoints +=10
+// // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards.
+answers[0].addEventListener('click', (event) => {
+	if (event.target.dataset.increment == 10) {
+		addPoints += 10;
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
-		playerFeedbackOne.innerText = "Yay, you guessed correctly! Click the next button to continue."
-    } else if (event.target.dataset.increment == 0) {
-        playerFeedbackOne.innerText = "Oops! Red Tailed Hawks are birds of prey because they hunt smaller animals." // // Not sure if I want an alert like this.
-    };
-})
+		playerFeedbackOne.innerText =
+			'Yay, you guessed correctly! Click the next button to continue.';
+	} else if (event.target.dataset.increment == 0) {
+		playerFeedbackOne.innerText =
+			'Oops! Red Tailed Hawks are birds of prey because they hunt smaller animals.'; // // Not sure if I want an alert like this.
+	}
+});
 
 answers[1].addEventListener('click', (event) => {
 	if (event.target.dataset.increment == 10) {
 		addPoints += 10;
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
-		playerFeedbackTwo.innerText = 'Yay, you guessed correctly! Click the next button to continue.';
+		playerFeedbackTwo.innerText =
+			'Yay, you guessed correctly! Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
-		playerFeedbackTwo.innerText = "Oops! Primary colors are Red, Yellow, and Blue because other colors can\'t be mixed to create them. Click the next button to continue"
+		playerFeedbackTwo.innerText =
+			"Oops! Primary colors are Red, Yellow, and Blue because other colors can't be mixed to create them. Click the next button to continue";
 	}
 });
 
@@ -82,22 +84,19 @@ answers[2].addEventListener('click', (event) => {
 	if (event.target.dataset.increment == 10) {
 		addPoints += 10;
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
-		playerFeedbackThree.innerText = 'Yay, you guessed correctly! Click the next button to continue.';
+		playerFeedbackThree.innerText =
+			'Yay, you guessed correctly! Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
-		playerFeedbackThree.innerText = 'Oops! Argentina is a country within South America, while Africa and Asia are continents.'; // // Not sure if I want an alert like this.
+		playerFeedbackThree.innerText =
+			'Oops! Argentina is a country within South America, while Africa and Asia are continents.'; // // Not sure if I want an alert like this.
 	}
 });
 
-
-// // --------- SCORE CARD ---------- // 
-const pointsEarned = document.querySelector("h3")
+// // --------- SCORE CARD ---------- //
+const pointsEarned = document.querySelector('h3');
 const score = document.querySelector('#score');
-score.appendChild(pointsEarned)
-pointsEarned.style.textAlign = "center"
-
-
-
-
+score.appendChild(pointsEarned);
+pointsEarned.style.textAlign = 'center';
 
 // // ---- SELECTING ANSWERS ---- //
 // // Coding below is absolutely wrong, just trying to get general point across
@@ -109,16 +108,16 @@ pointsEarned.style.textAlign = "center"
 // 	}
 // }
 
-// // -------- OTHER PSUEDO CODE  ------ // 
+// // -------- OTHER PSUEDO CODE  ------ //
 // function chooseAnswer() {
 //     if (answer == 10) {
 // 		innerText = "congrats!"
 //     } else if (answer != 10) {
-//      innerText = "Oops, that's not the right answer! The correct answer is a!" 
+//      innerText = "Oops, that's not the right answer! The correct answer is a!"
 //     }
 // }
 
-// // ---- ATTEMPTING TO CODE ---- // 
+// // ---- ATTEMPTING TO CODE ---- //
 // questionOneChoices.addEventListener("click", answer)
 // let questionOneChoices = answerA
 // if (event.click.questionOneChoices == answerA) {
@@ -127,17 +126,8 @@ pointsEarned.style.textAlign = "center"
 // 	console.log("Oops!!");
 // }
 
-
-
-
-
-
-
-
-
-
 // --- Need to get the cards to overlap on top of each other upon clicking a new one -- DONE -- //
 
-// --- use innHTML to clear out info in the current overlayed card and display if the player got the correct answer.
+// --- use innHTML to clear out info in the current overlayed card and display if the player got the correct answer. -- DONE -- //
 // --- if answerPicked === answerA (congrats you did it!)
 // --- else answerPicked != answerA (Oops! The correct answer is `${answerA}`)
