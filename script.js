@@ -38,9 +38,11 @@ const restart = () => {
 };
 newGame.addEventListener('click', restart);
 
-// // ---- SCORE CARD ---- //
-// const answers = document.querySelectorAll(".card");
-// let addPoints = 0
+
+
+// // // ---- SCORE CARD ---- //
+
+let addPoints = 0;
 
 // // // Why isn't this an event listener? The moment I put ()'s the event listener text changes to yellow and won't work.
 // answers.addEventListener("click", (event) => {
@@ -53,6 +55,19 @@ newGame.addEventListener('click', restart);
 //     };
 // })
 
+// const answers = document.querySelectorAll("#card");
+
+// // --------- Tally ---------- // 
+const pointsEarned = document.createElement("h3")
+pointsEarned.innerText = `Points Earned: ${addPoints}`
+const score = document.querySelector('#score');
+score.appendChild(pointsEarned)
+pointsEarned.style.textAlign = "center"
+
+
+
+
+
 // // ---- SELECTING ANSWERS ---- //
 // // Coding below is absolutely wrong, just trying to get general point across
 // function chooseAnswer (correct, incorrect) {
@@ -62,6 +77,24 @@ newGame.addEventListener('click', restart);
 // 		oops!!
 // 	}
 // }
+
+// // ---- ATTEMPTING TO CODE ---- // 
+// questionOneChoices.addEventListener("click", answer)
+// let questionOneChoices = answerA
+// if (event.click.questionOneChoices == answerA) {
+// 	console.log("Correct!!");
+// } else if (click.questionchoices != answerA) {
+// 	console.log("Oops!!");
+// }
+
+
+
+
+
+
+
+
+
 
 // --- Need to get the cards to overlap on top of each other upon clicking a new one -- DONE -- //
 
