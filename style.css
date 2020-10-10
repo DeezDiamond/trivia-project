@@ -45,17 +45,18 @@ body {
 }
 
 .buttonfooter {
-	position: relative;
-	bottom: 0;
+	position: fixed;
+	bottom: 35%;
+	left: 30%;
 }
 
 .pretty-button {
 	padding: 8px 18px;
 	background-color: #9696d6;
+	width: 150px;
 	border: none;
 	outline: none;
 	border-radius: 3px;
 	color: white;
-	font-family: 'Arial';
 	margin: 0 auto;
 }

@@ -50,12 +50,12 @@ const playerFeedbackOne = document.querySelector('#questionOneAnswer');
 const playerFeedbackTwo = document.querySelector('#questionTwoAnswer');
 const playerFeedbackThree = document.querySelector('#questionThreeAnswer');
 
-// // // ---- ANSWER SELECTION ---- //
+// // ---- ANSWER SELECTION ---- //
 
 let addPoints = 0;
 const answers = document.querySelectorAll('.questioncard');
 
-// // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards.
+// // // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards.
 answers[0].addEventListener('click', (event) => {
 	if (event.target.dataset.increment == 10) {
 		addPoints += 10;
@@ -76,7 +76,7 @@ answers[1].addEventListener('click', (event) => {
 			'Yay, you guessed correctly! Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
 		playerFeedbackTwo.innerText =
-			"Oops! Primary colors are Red, Yellow, and Blue because other colors can't be mixed to create them. Click the next button to continue";
+			"Oops! Primary colors are Red, Yellow, and Blue. The easiest way to remember this is knowing that other colors can't be mixed to create them. Click the next button to continue";
 	}
 });
 

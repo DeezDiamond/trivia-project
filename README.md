@@ -1,8 +1,6 @@
 # Trivia
 
-- This page is a simple trivia game that asks the user a series of questions. 
-
-## Technologies Used 
+- Trivia is a multiple choice game in which the player selects the correct answer to satisfy the question that's asked of them. Correct answers add to a tally of points for the player, and incorrect answers offer brief education on the appropriate response so that the player can continue with the game.
 
 - JavaScript, HTML, and CSS have been used in this page, and pushed through [HTML](https://html5.validator.nu/) and [CSS](https://jigsaw.w3.org/css-validator/) validators.
 
