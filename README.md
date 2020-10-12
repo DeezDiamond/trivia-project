@@ -35,3 +35,9 @@
 ![Initial Page](https://media.git.generalassemb.ly/user/30672/files/feff1000-08ba-11eb-8fee-265b5931271b)
 
 ![Additional Pages](https://media.git.generalassemb.ly/user/30672/files/0c1bff00-08bb-11eb-89a7-c74ba89978cf)
+
+## Challenges 
+
+- Designing a trivia game, the biggest hurdle was getting the choices to be responsive when the player wants to select one. I especially wanted to keep accessibility in mind for both mobile users and users who may not have the dexterity to aim for a small check box or radio button when choosing an answer. 
+
+- After making entire sentences clickable, I wanted to make it a little more obvious that the whole sentence could be clicked on by enveloping the entirety of a choice in a different color which stands out from the background. 

@@ -55,7 +55,7 @@ const playerFeedbackThree = document.querySelector('#questionThreeAnswer');
 let addPoints = 0;
 const answers = document.querySelectorAll('.questioncard');
 
-// // // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards.
+// // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards.
 answers[0].addEventListener('click', (event) => {
 	if (event.target.dataset.increment == 10) {
 		addPoints += 10;
@@ -85,7 +85,7 @@ answers[2].addEventListener('click', (event) => {
 		addPoints += 10;
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
 		playerFeedbackThree.innerText =
-			'Yay, you guessed correctly! Click the next button to continue.';
+			'Yay, you guessed correctly! Argentina is a country within the continent of South America. Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
 		playerFeedbackThree.innerText =
 			'Oops! Argentina is a country within South America, while Africa and Asia are continents.'; // // Not sure if I want an alert like this.

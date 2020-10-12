@@ -45,9 +45,9 @@ body {
 }
 
 .buttonfooter {
-	position: fixed;
-	bottom: 35%;
-	left: 30%;
+	position: relative;
+	/* bottom: 35%;
+	left: 30%; */
 }
 
 .pretty-button {
