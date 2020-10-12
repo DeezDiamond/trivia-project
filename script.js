@@ -46,7 +46,7 @@ const viewTally = () => {
 	const correctTally = document.querySelector('#numCorrect');
 	const oopsTally = document.querySelector('#numOops');
 	correctTally.innerText = `You earned ${addPoints} points for the questions you answered correctly!`;
-	oopsTally.innerText = `And you made an oops on ${oopsPoints} questions!`;
+	oopsTally.innerText = `And you made an oops on ${oopsPoints} question(s)!`;
 }
 finalScore.addEventListener("click", viewTally)
 
@@ -155,9 +155,9 @@ pointsEarned.style.textAlign = 'center';
 // // -------- OTHER PSUEDO CODE  ------ //
 // function chooseAnswer() {
 //     if (answer == 10) {
-// 		innerText = "congrats!"
+// 		playerFeedbackOne.innerText = 'congrats!';
 //     } else if (answer != 10) {
-//      innerText = "Oops, that's not the right answer! The correct answer is a!"
+//      	innerText = "Oops, that's not the right answer! The correct answer is a!"
 //     }
 // }
 

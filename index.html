@@ -7,15 +7,16 @@
 		<title>Project 1: Trivia</title>
 	</head>
 	<body>
-		<h1>Welcome to Trivia</h1>
+		
 		<div id="container">
+			<h1>Welcome to Trivia</h1>
 			<div id="score">
 				<h3>Points Earned: 0</h3>
 			</div>
 			<div class="card" id="intro">
-				<p>There is a series of three questions in this trivia game. Can you answer them all? Click the button below to review the instructions, then have fun!</p>
+				<p>There is a series of questions in this trivia game. Can you answer them all? Click the button below to review the instructions, then have fun!</p>
 			
-				<p>I don't like how the button hops around. Fix it via putting it into a footer.</p>
+				<p><img src="https://media0.giphy.com/media/3oEhmPyqvHwsGqY9Xi/giphy.gif" alt=""></p>
 
 				<div class="buttonfooter">
 					<button id="begin" class="pretty-button">
@@ -27,7 +28,6 @@
 			<div class="card" id="instructions">
 				<h3>How To Play</h3>
 				<ul>
-					<li>Read the question</li>
 					<li>Click on the answer of your choice to see if you're correct. Be aware that clicking Next without answering will cause you to skip the question!</li>
 					<li>When ready, <del>lick</del> click Next to continue</li>
 					<li>Please don't lick your screen...</li>
@@ -104,9 +104,11 @@
 				<p>You made it to the end, great job! Here's how you did.</p>
 				<div id="numCorrect"></div>
 				<div id="numOops"></div>
+				<div class="buttonfooter">
 					<button id="restart" class="pretty-button">
 						Start Over
 					</button>
+				</div>
 			</div>
 		</div>
 		<script src="script.js"></script>

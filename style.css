@@ -3,20 +3,17 @@ body {
 }
 
 #container {
+	background-color: aqua;
 	width: 50vh;
-	height: 50vh;
+	height: 63vh;
 }
 
-/* #intro {
+h1 {
 	text-align: center;
-	line-height: 25px;
-	background-color: #e84678;
-	border-radius: 20px;
-	width: 100%;
-	height: 30vh;
-	top: 10vh;
-	display: inline-block;
-} */
+	padding-top: 5px;
+	line-height: 20px;
+	text-decoration: underline;
+}
 
 .card,
 .questioncard {
@@ -24,10 +21,12 @@ body {
 	line-height: 25px;
 	background-color: #e84678;
 	border-radius: 20px;
-	width: 100%;
-	height: 50vh;
-	top: 10vh;
+	width: 95%;
+	height: 48vh;
+	/* top: 1vh; */
 	padding: 10px;
+	position: relative;
+	image-
 }
 
 .questioncard li {
@@ -48,9 +47,9 @@ body {
 }
 
 .buttonfooter {
-	position: relative;
-	/* bottom: 35%;
-	left: 30%; */
+	position: absolute;
+	width: 50vh;
+	bottom: 30px;
 }
 
 .pretty-button {
@@ -61,5 +60,6 @@ body {
 	outline: none;
 	border-radius: 3px;
 	color: white;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
