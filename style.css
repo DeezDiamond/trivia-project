@@ -19,8 +19,7 @@ body {
 } */
 
 .card,
-.questioncard,
-#intro {
+.questioncard {
 	text-align: center;
 	line-height: 25px;
 	background-color: #e84678;
@@ -37,10 +36,14 @@ body {
 	margin-bottom: 5px;
 }
 
+/* .questioncard li:hover {
+
+} */
+
 #instructions,
 #questionOne,
 #questionTwo,
-#questionThree {
+#questionThree, #questionFour, #finalTally {
 	display: none;
 }
 

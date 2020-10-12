@@ -6,6 +6,8 @@ const startGame = document.querySelector('#begin');
 const questOne = document.querySelector('#goToOne');
 const questTwo = document.querySelector('#goToTwo');
 const questThree = document.querySelector('#goToThree');
+const questFour = document.querySelector("#goToFour");
+const finalScore = document.querySelector("#viewTally");
 const newGame = document.querySelector('#restart');
 
 const begin = () => {
@@ -32,27 +34,48 @@ const goToThree = () => {
 };
 questThree.addEventListener('click', goToThree);
 
+const goToFour = () => {
+	questionFour.style.display = 'block';
+	questionThree.style.display = 'none';
+};
+questFour.addEventListener('click', goToFour);
+
+const viewTally = () => {
+	finalTally.style.display = "block"
+	questionFour.style.display = "none"
+	const correctTally = document.querySelector('#numCorrect');
+	const oopsTally = document.querySelector('#numOops');
+	correctTally.innerText = `You earned ${addPoints} points for the questions you answered correctly!`;
+	oopsTally.innerText = `And you made an oops on ${oopsPoints} questions!`;
+}
+finalScore.addEventListener("click", viewTally)
+
 // // ----- RESET FIELD ----- //
 // // ----Resets point count, clears feedback, takes user back to the beginning--------- //
 
 const restart = () => {
 	intro.style.display = 'block';
-	questionThree.style.display = 'none';
+	finalTally.style.display = 'none';
 	pointsEarned.innerText = 'Points Earned: 0';
 	addPoints = 0;
+	oopsPoints = 0;
 	playerFeedbackOne.innerText = '';
 	playerFeedbackTwo.innerText = '';
 	playerFeedbackThree.innerText = '';
+	// correctTally.innerText = ""
+	// oopsTally.innerText = ""
 };
 newGame.addEventListener('click', restart);
 
 const playerFeedbackOne = document.querySelector('#questionOneAnswer');
 const playerFeedbackTwo = document.querySelector('#questionTwoAnswer');
 const playerFeedbackThree = document.querySelector('#questionThreeAnswer');
+const playerFeedbackFour = document.querySelector('#questionFourAnswer');
 
 // // ---- ANSWER SELECTION ---- //
 
 let addPoints = 0;
+let oopsPoints = 0;
 const answers = document.querySelectorAll('.questioncard');
 
 // // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards.
@@ -63,6 +86,7 @@ answers[0].addEventListener('click', (event) => {
 		playerFeedbackOne.innerText =
 			'Yay, you guessed correctly! Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
+		oopsPoints += 1;
 		playerFeedbackOne.innerText =
 			'Oops! Red Tailed Hawks are birds of prey because they hunt smaller animals.'; // // Not sure if I want an alert like this.
 	}
@@ -75,6 +99,7 @@ answers[1].addEventListener('click', (event) => {
 		playerFeedbackTwo.innerText =
 			'Yay, you guessed correctly! Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
+		oopsPoints += 1;
 		playerFeedbackTwo.innerText =
 			"Oops! Primary colors are Red, Yellow, and Blue. The easiest way to remember this is knowing that other colors can't be mixed to create them. Click the next button to continue";
 	}
@@ -87,18 +112,37 @@ answers[2].addEventListener('click', (event) => {
 		playerFeedbackThree.innerText =
 			'Yay, you guessed correctly! Argentina is a country within the continent of South America. Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
+		oopsPoints += 1;
 		playerFeedbackThree.innerText =
-			'Oops! Argentina is a country within South America, while Africa and Asia are continents.'; // // Not sure if I want an alert like this.
+			'Oops! Argentina is a country within South America, while Africa and Asia are continents.'; 
 	}
 });
 
-// // --------- SCORE CARD ---------- //
+answers[3].addEventListener('click', (event) => {
+	if (event.target.dataset.increment == 10) {
+		addPoints += 10;
+		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+		playerFeedbackFour.innerText =
+			'Yay, you guessed correctly!';
+	} else if (event.target.dataset.increment == 0) {
+		oopsPoints += 1;
+		playerFeedbackFour.innerText =
+			'Oops! So far we have learned JavaScript in SEIR.';
+	}
+});
+
+// // --------- SCORE HEADING ---------- //
 const pointsEarned = document.querySelector('h3');
 const score = document.querySelector('#score');
 score.appendChild(pointsEarned);
 pointsEarned.style.textAlign = 'center';
 
-// // ---- SELECTING ANSWERS ---- //
+
+// // ------- VIEW FINAL TALLY ----- //
+
+
+
+// // ---- SELECTING ANSWERS PSUEDOCODE ---- //
 // // Coding below is absolutely wrong, just trying to get general point across
 // function chooseAnswer (correct, incorrect) {
 // 	if (event.target == answerA || answerF || answerH) {
@@ -117,13 +161,13 @@ pointsEarned.style.textAlign = 'center';
 //     }
 // }
 
-// // ---- ATTEMPTING TO CODE ---- //
+// // ---- ATTEMPTING TO PSUEDOCODE ---- //
 // questionOneChoices.addEventListener("click", answer)
 // let questionOneChoices = answerA
 // if (event.click.questionOneChoices == answerA) {
-// 	console.log("Correct!!");
+// playerFeedbackOne.innerText = "Yay, you guess correctlly!"
 // } else if (click.questionchoices != answerA) {
-// 	console.log("Oops!!");
+// 	playerFeedbackOne.innerText = "Oops!!"
 // }
 
 // --- Need to get the cards to overlap on top of each other upon clicking a new one -- DONE -- //

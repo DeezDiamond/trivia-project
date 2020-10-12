@@ -12,7 +12,7 @@
 			<div id="score">
 				<h3>Points Earned: 0</h3>
 			</div>
-			<div id="intro">
+			<div class="card" id="intro">
 				<p>There is a series of three questions in this trivia game. Can you answer them all? Click the button below to review the instructions, then have fun!</p>
 			
 				<p>I don't like how the button hops around. Fix it via putting it into a footer.</p>
@@ -72,16 +72,41 @@
 			<div class="questioncard" id="questionThree">
 				<h3>3. Which of the following is a country?</h3>
 				<ul id="questionThreeChoices">
-					<li id="answerG" data-increment="0">A: Asia</li>
-					<li id="answerH" data-increment="10">B: Argentina</li>
+					<li id="answerH" data-increment="10">A: Argentina</li>
+					<li id="answerG" data-increment="0">B: Asia</li>
 					<li id="answerI" data-increment="0">C: Africa</li>
 				</ul>
 				<div id="questionThreeAnswer"></div>
 				<div class="buttonfooter">
+					<button id="goToFour" class="pretty-button">
+						Next Question
+					</button>
+				</div>
+			</div>
+
+			<div class="questioncard" id="questionFour">
+				<h3>Which coding language have we learned so far?</h3>
+				<ul id=questionFourChoices>
+					<li id="answerJ" data-increment="0">A: Java</li>
+					<li id="answerK" data-increment="10">B: JavaScript</li>
+					<li id="answerL" data-increment="0">C: jQuery</li>
+				</ul>
+				<div id="questionFourAnswer"></div>
+				<div class="buttonfooter">
+					<button id="viewTally" class="pretty-button">
+						See your score
+					</button>
+				</div>
+			</div>
+
+			<div class="card" id="finalTally">
+				<h3>Your score</h3>
+				<p>You made it to the end, great job! Here's how you did.</p>
+				<div id="numCorrect"></div>
+				<div id="numOops"></div>
 					<button id="restart" class="pretty-button">
 						Start Over
 					</button>
-				</div>
 			</div>
 		</div>
 		<script src="script.js"></script>
