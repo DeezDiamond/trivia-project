@@ -6,7 +6,7 @@
 
 ## Installation Instructions
 
-- "For this project, clone and open the HTML file in a browser manually or on a server like LiveServer"
+- This game can be accessed live at https://deezdiamond.github.io/trivia-project/ 
 
 ## User Stories
 
