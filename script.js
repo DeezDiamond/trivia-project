@@ -62,11 +62,11 @@ const restart = () => {
 	playerFeedbackOne.innerText = '';
 	playerFeedbackTwo.innerText = '';
 	playerFeedbackThree.innerText = '';
-	// correctTally.innerText = ""
-	// oopsTally.innerText = ""
 };
 newGame.addEventListener('click', restart);
 
+// // ---- ANSWER FEEDBACK ---- // 
+// // Area where feedback on if the player selected a correct or wrong answer will populate
 const playerFeedbackOne = document.querySelector('#questionOneAnswer');
 const playerFeedbackTwo = document.querySelector('#questionTwoAnswer');
 const playerFeedbackThree = document.querySelector('#questionThreeAnswer');
@@ -78,7 +78,7 @@ let addPoints = 0;
 let oopsPoints = 0;
 const answers = document.querySelectorAll('.questioncard');
 
-// // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards.
+// // ---- This could be C&P for each question card. Can't figure out how to make this loop through all the cards, especially since each answer has individual feedback. 
 answers[0].addEventListener('click', (event) => {
 	if (event.target.dataset.increment == 10) {
 		addPoints += 10;
@@ -110,11 +110,11 @@ answers[2].addEventListener('click', (event) => {
 		addPoints += 10;
 		pointsEarned.innerText = `Points Earned: ${addPoints}`;
 		playerFeedbackThree.innerText =
-			'Yay, you guessed correctly! Argentina is a country within the continent of South America. Click the next button to continue.';
+			'Yay, you guessed correctly! Click the next button to continue.';
 	} else if (event.target.dataset.increment == 0) {
 		oopsPoints += 1;
 		playerFeedbackThree.innerText =
-			'Oops! Argentina is a country within South America, while Africa and Asia are continents.'; 
+			'Oops! Argentina is a country within the continent of South America. Africa and Asia are continents which contain countries.'; 
 	}
 });
 
@@ -127,7 +127,7 @@ answers[3].addEventListener('click', (event) => {
 	} else if (event.target.dataset.increment == 0) {
 		oopsPoints += 1;
 		playerFeedbackFour.innerText =
-			'Oops! So far we have learned JavaScript in SEIR.';
+			'Oops! So far we have learned JavaScript in SEIR. Java is computer software, and jQuery is a JavaScript library.';
 	}
 });
 
@@ -136,42 +136,3 @@ const pointsEarned = document.querySelector('h3');
 const score = document.querySelector('#score');
 score.appendChild(pointsEarned);
 pointsEarned.style.textAlign = 'center';
-
-
-// // ------- VIEW FINAL TALLY ----- //
-
-
-
-// // ---- SELECTING ANSWERS PSUEDOCODE ---- //
-// // Coding below is absolutely wrong, just trying to get general point across
-// function chooseAnswer (correct, incorrect) {
-// 	if (event.target == answerA || answerF || answerH) {
-// 		yay you did it!
-// 	} else if (event.target != answerA || answerF || answerH) {
-// 		oops!!
-// 	}
-// }
-
-// // -------- OTHER PSUEDO CODE  ------ //
-// function chooseAnswer() {
-//     if (answer == 10) {
-// 		playerFeedbackOne.innerText = 'congrats!';
-//     } else if (answer != 10) {
-//      	innerText = "Oops, that's not the right answer! The correct answer is a!"
-//     }
-// }
-
-// // ---- ATTEMPTING TO PSUEDOCODE ---- //
-// questionOneChoices.addEventListener("click", answer)
-// let questionOneChoices = answerA
-// if (event.click.questionOneChoices == answerA) {
-// playerFeedbackOne.innerText = "Yay, you guess correctlly!"
-// } else if (click.questionchoices != answerA) {
-// 	playerFeedbackOne.innerText = "Oops!!"
-// }
-
-// --- Need to get the cards to overlap on top of each other upon clicking a new one -- DONE -- //
-
-// --- use innHTML to clear out info in the current overlayed card and display if the player got the correct answer. -- DONE -- //
-// --- if answerPicked === answerA (congrats you did it!)
-// --- else answerPicked != answerA (Oops! The correct answer is `${answerA}`)
