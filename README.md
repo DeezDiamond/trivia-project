@@ -6,7 +6,7 @@
 
 ## Installation Instructions
 
-- This game can be accessed live at https://deezdiamond.github.io/trivia-project/ 
+- This game can be accessed live on [GitHub Pages](https://deezdiamond.github.io/trivia-project/)
 
 ## User Stories
 
