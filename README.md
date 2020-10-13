@@ -41,3 +41,7 @@
 - Designing a trivia game, the biggest hurdle was getting the choices to be responsive when the player wants to select one. I especially wanted to keep accessibility in mind for both mobile users and users who may not have the dexterity to aim for a small check box or radio button when choosing an answer.
 
 - After making entire sentences clickable, I wanted to make it a little more obvious that the whole sentence could be clicked on by enveloping the entirety of a choice in a different color which stands out from the background.
+
+## Screenshot
+![Mobile Screenshot](images/mobile-screenshot.png)
+The layout is mobile responsive! It will resize itself accordingly with the size of the page. 
