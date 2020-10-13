@@ -43,5 +43,6 @@
 - After making entire sentences clickable, I wanted to make it a little more obvious that the whole sentence could be clicked on by enveloping the entirety of a choice in a different color which stands out from the background.
 
 ## Screenshot
-![Mobile Screenshot](images/mobile-screenshot.png)
-The layout is mobile responsive! It will resize itself accordingly with the size of the page. 
+![Desktop Screenshot](images/desktop-screenshot.png)
+![Mobile Screenshot](images/LG-screenshot.png)
+- The layout is mobile responsive! It will resize itself accordingly with the size of the page. 
