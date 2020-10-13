@@ -2,42 +2,64 @@ body {
 	background-color: antiquewhite;
 }
 
-.card {
-	text-align: center;
-	line-height: 25px;
-	imag;
+#container {
+	background-color: aqua;
+	width: 50vh;
+	height: 63vh;
 }
 
-.modal {
-	background-color: rgba(0, 0, 0, 0.2);
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
+h1 {
+	text-align: center;
+	padding-top: 5px;
+	line-height: 20px;
+	text-decoration: underline;
+}
+
+.card,
+.questioncard {
+	text-align: center;
+	line-height: 25px;
+	background-color: #e84678;
+	border-radius: 20px;
+	width: 95%;
+	height: 48vh;
+	/* top: 1vh; */
+	padding: 10px;
+	position: relative;
+	image-
+}
+
+.questioncard li {
+	background-color: #824678;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+
+/* .questioncard li:hover {
+
+} */
+
+#instructions,
+#questionOne,
+#questionTwo,
+#questionThree, #questionFour, #finalTally {
 	display: none;
 }
 
-/* #instructions {
-	background-color: white;
-	height: 350px;
-	width: 550px;
-	border-radius: 2px;
-	margin: 150px auto;
-	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-	padding: 2%;
-	line-height: 120%;
-	font-family: arial; */
-/* } */
+.buttonfooter {
+	position: absolute;
+	width: 50vh;
+	bottom: 30px;
+}
 
 .pretty-button {
 	padding: 8px 18px;
 	background-color: #9696d6;
+	width: 150px;
 	border: none;
 	outline: none;
 	border-radius: 3px;
 	color: white;
-	font-family: 'Arial';
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
