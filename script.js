@@ -86,7 +86,8 @@ const restart = () => {
 	playerFeedbackFour.innerText = '';
 	playerFeedbackFive.innerText = '';
 	playerFeedbackSix.innerText = '';
-	playerFeedbackSeven.innerText = '';
+	playerFeedbackSeven.innerHTML =
+		'Hint: Do some <a href="https://generalassemb.ly/why-ga-is-worth-it">research</a>';
 };
 newGame.addEventListener('click', restart);
 
