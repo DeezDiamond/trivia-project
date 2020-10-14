@@ -22,7 +22,6 @@ h1 {
 .questioncard {
 	text-align: center;
 	line-height: 25px;
-	/* background-color: #e84678; */
 	border-radius: 20px;
 	width: 95%;
 	height: 48vh;
@@ -34,21 +33,14 @@ h1 {
 	width: 90%;
 }
 
+#instructions, .questioncard, #finalTally {
+	display: none;
+}
+
 .questioncard li {
 	background-color: #CFBDDB;
 	border-radius: 10px;
 	margin-bottom: 10px;
-}
-
-/* .questioncard li:hover {
-
-} */
-
-#instructions,
-#questionOne,
-#questionTwo,
-#questionThree, #questionFour, #finalTally {
-	display: none;
 }
 
 .buttonfooter {

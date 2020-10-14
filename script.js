@@ -7,6 +7,9 @@ const questOne = document.querySelector('#goToOne');
 const questTwo = document.querySelector('#goToTwo');
 const questThree = document.querySelector('#goToThree');
 const questFour = document.querySelector("#goToFour");
+const questFive = document.querySelector('#goToFive');
+const questSix = document.querySelector('#goToSix');
+const questSeven = document.querySelector('#goToSeven');
 const finalScore = document.querySelector("#viewTally");
 const newGame = document.querySelector('#restart');
 
@@ -40,9 +43,27 @@ const goToFour = () => {
 };
 questFour.addEventListener('click', goToFour);
 
+const goToFive = () => {
+	questionFive.style.display = 'block';
+	questionFour.style.display = 'none';
+};
+questFive.addEventListener('click', goToFive);
+
+const goToSix = () => {
+	questionSix.style.display = 'block';
+	questionFive.style.display = 'none';
+};
+questSix.addEventListener('click', goToSix);
+
+const goToSeven = () => {
+	questionSeven.style.display = 'block';
+	questionSix.style.display = 'none';
+};
+questSeven.addEventListener('click', goToSeven);
+
 const viewTally = () => {
 	finalTally.style.display = "block"
-	questionFour.style.display = "none"
+	questionSeven.style.display = "none"
 	const correctTally = document.querySelector('#numCorrect');
 	const oopsTally = document.querySelector('#numOops');
 	correctTally.innerText = `You earned ${addPoints} points for the questions you answered correctly!`;
@@ -62,6 +83,10 @@ const restart = () => {
 	playerFeedbackOne.innerText = '';
 	playerFeedbackTwo.innerText = '';
 	playerFeedbackThree.innerText = '';
+	playerFeedbackFour.innerText = '';
+	playerFeedbackFive.innerText = '';
+	playerFeedbackSix.innerText = '';
+	playerFeedbackSeven.innerText = '';
 };
 newGame.addEventListener('click', restart);
 
@@ -71,6 +96,10 @@ const playerFeedbackOne = document.querySelector('#questionOneAnswer');
 const playerFeedbackTwo = document.querySelector('#questionTwoAnswer');
 const playerFeedbackThree = document.querySelector('#questionThreeAnswer');
 const playerFeedbackFour = document.querySelector('#questionFourAnswer');
+const playerFeedbackFive = document.querySelector('#questionFiveAnswer');
+const playerFeedbackSix = document.querySelector('#questionSixAnswer');
+const playerFeedbackSeven = document.querySelector('#questionSevenAnswer');
+
 
 // // ---- ANSWER SELECTION ---- //
 
@@ -128,6 +157,43 @@ answers[3].addEventListener('click', (event) => {
 		oopsPoints += 1;
 		playerFeedbackFour.innerText =
 			'Oops! So far we have learned JavaScript in SEIR. Java is computer software, and jQuery is a JavaScript library.';
+	}
+});
+
+answers[4].addEventListener('click', (event) => {
+	if (event.target.dataset.increment == 10) {
+		addPoints += 10;
+		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+		playerFeedbackFive.innerText = 'Yay, you guessed correctly!';
+	} else if (event.target.dataset.increment == 0) {
+		oopsPoints += 1;
+		playerFeedbackFive.innerText =
+			'Oops! Cinderella is the one who lost glass slippers. Mulan is a warrior, and let\'s hope Nala never wears shoes.';
+	}
+});
+
+answers[5].addEventListener('click', (event) => {
+	if (event.target.dataset.increment == 20) {
+		addPoints += 20;
+		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+		playerFeedbackSix.innerText = 'Whoopie! You guessed the best animal, have a bonus!';
+	} else if (event.target.dataset.increment == 10) {
+		addPoints += 10;
+		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+		playerFeedbackSix.innerText =
+			'Yeah, those are pretty nice animals. Have some points!';
+	}
+});
+
+answers[6].addEventListener('click', (event) => {
+	if (event.target.dataset.increment == 10) {
+		addPoints += 10;
+		pointsEarned.innerText = `Points Earned: ${addPoints}`;
+		playerFeedbackSeven.innerText = 'Yay, you guessed correctly!';
+	} else if (event.target.dataset.increment == 0) {
+		oopsPoints += 1;
+		playerFeedbackSeven.innerText =
+			'Oops! General Assembly has been transforming careers for people since 2011. The year 1969 is relevant to computer history though, look it up sometime.';
 	}
 });
 
